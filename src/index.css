@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-dark: #0a1628;
+  --color-ocean-medium: #0d2137;
+  --color-ocean-light: #1a3a5c;
+  --color-gold: #ffd700;
+  --color-wood: #8b5e3c;
+  --color-wood-dark: #5c3d1e;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ---- Custom Scrollbar ---- */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 215, 0, 0.25) transparent;
+  scroll-behavior: smooth;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.25);
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.5);
+}
+
+/* ---- Global scroll behaviour ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- Text glow ---- */
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.2);
+}
+
+/* ---- Animate spin slow ---- */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
